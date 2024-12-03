@@ -1,7 +1,9 @@
 """ Day 2: Part 2 of Advent of Code 2024 """
-with open('input2.txt', 'r', encoding='utf-8') as file:
+with open('day2_input.txt', 'r', encoding='utf-8') as file:
     lines = [[int(number) for number in line.split()] for line in file]
+
 SAFE = 0
+
 for line in lines:
     sublines = [line[:i] + line[i+1:] for i in range(len(line))]
     sublines.append(line)
@@ -16,4 +18,5 @@ for line in lines:
         if ASCENDING or DESCENDING:
             SAFE += 1
             break
+
 print(SAFE)

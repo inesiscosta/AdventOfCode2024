@@ -3,7 +3,7 @@ left = []
 right = []
 SIMILARITY = 0
 
-with open('input1.txt', 'r', encoding='utf-8') as file:
+with open('day1_input.txt', 'r', encoding='utf-8') as file:
     for line in file:
         num1, num2 = line.split()
         left.append(int(num1))
